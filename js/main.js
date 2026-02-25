@@ -8,7 +8,7 @@ const map = new mapboxgl.Map({
 });
 
 map.on("load", () => {
-  fetch("assets/collisions2024.geojson")
+  fetch("assets/SDOT_Collisions_2024.geojson")
     .then(r => r.json())
     .then(data => {
 
