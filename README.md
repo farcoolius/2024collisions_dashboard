@@ -4,7 +4,7 @@
 
 # Seattle Traffic Collisions Dashboard (2024)
 
-This interactive dashboard visualizes traffic collisions across Seattle in 2024 using a dynamic web map and chart. The goal of this dashboard is to help users explore spatial patterns in collision distribution and understand how collision types vary across different areas of the city. By integrating a map with collision locations across Seattle, the dashboard allows users to analyze both geographic and categorical trends simultaneously.
+This interactive dashboard visualizes traffic collisions across Seattle in 2024 using a dynamic web map and chart. The goal of this dashboard is to help users explore spatial patterns in collision distribution and understand how number of collisions vary across different areas of the city. By integrating a map with collision locations across Seattle, the dashboard allows users to analyze both geographic and categorical trends simultaneously.
 
 ## Live Map
 **View Dashboard:**
