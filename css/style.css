@@ -1,76 +1,46 @@
-body {
-    margin: 0;
-    padding: 0;
+html, body { height: 100%; margin: 0; font-family: "Google Sans", Arial, sans-serif; }
+
+#info{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 340px;         /* panel width */
+  height: 100vh;
+  background: white;
+  padding: 12px 12px 16px 12px;
+  overflow-y: auto;
+  z-index: 2;           /* keep above map */
+  box-shadow: 2px 0 10px rgba(0,0,0,0.15);
 }
 
-#map {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 100%;
+#map{
+  position: absolute;
+  top: 0;
+  left: 340px;          /* same as #info width */
+  right: 0;
+  bottom: 0;
+  z-index: 1;
 }
 
-/* the layout of the legend panel */
 #legend{
-    position: absolute;
-    bottom: 30px;
-    right: 20px;
-    background: #fff;
-    padding: 10px 12px;
-    border-radius: 6px;
-    font-family: Arial, sans-serif;
-    font-size: 12px;
-    line-height: 1.2em;
-    width: 190px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-}
-  
-.legend-title{
-    font-weight: 700;
-    margin-bottom: 8px;
-}
-  
-.legend-row{
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin: 4px 0;
-}
-  
-.swatch{
-    width: 14px;
-    height: 14px;
-    border: 1px solid rgba(0,0,0,0.2);
-    display: inline indicating-block; /* <-- remove this line */
-    display: inline-block;
-}
-  
-.legend-source{
-    margin-top: 8px;
-    font-size: 10px;
-    text-align: right;
-    color: #333;
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  z-index: 3;           /* above map */
+  background: rgba(255,255,255,0.95);
+  padding: 10px 12px;
+  border-radius: 8px;
+  box-shadow: 0 1px 10px rgba(0,0,0,0.15);
 }
 
-#title {
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin-top: 20px;
-    margin-left: 20px;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 25pt;
-    color: white
+/* Make chart visible and not “collapse” */
+#chart{
+  width: 100%;
+  min-height: 240px;
+  margin-top: 8px;
 }
 
-
-#subtitle {
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin-top: 70px;
-    margin-left: 190px;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 15pt;
-    color: white
+/* Make the C3 SVG responsive */
+#chart svg{
+  width: 100% !important;
 }
